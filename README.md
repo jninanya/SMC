@@ -25,14 +25,18 @@ Values
 - **$fitted.data:** A data frame of the observed and estimated data.
 - **$simulated.data:**  A data frame of simulated data for biomass or canopy cover.
 - **$warning.message:** A character indicating any warning message in the model fitting.
-- **$out.model:** A summary.nls of the model.
+- **$out.model:** A summary.nls of the fitted model.
 
 Example
 -----
 ```{r eval=F}
-n=20
-data=data.frame("id"=1:n,"ys"=runif(n)*5,"yp"=runif(n)*10)
-ts=Thiry("id","ys","yp",data)
+cc<-read.csv("canopy_cover_data.csv")
+hi<-read.csv("biomass_data.csv")
+
+# for canopy cover data
+out=FitCurveSM(x=cc[,1], y = cc[,5], xfun = "Beta", xtime = "dap", graph = TRUE)
+
+![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
 ```
 ![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
 
