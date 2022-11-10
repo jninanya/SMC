@@ -34,10 +34,9 @@ cc<-read.csv("canopy_cover_data.csv")
 hi<-read.csv("biomass_data.csv")
 
 # for canopy cover data
-out=FitCurveSM(x=cc[,1], y = cc[,5], xfun = "Beta", xtime = "dap", graph = TRUE)
+out=FitCurveSM(x=cc[,1], y = cc[,5], xfun = "Beta", xtime = "dap")
 
-![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
+# Using another set of initial values (in case that default init.par value does not work)
+out=FitCurveSM(x=cc[,1], y = cc[,6], xfun = "Beta", xtime = "dap", use.par.default = FALSE, init.par = c(35,65,0.9), graph = TRUE)
 ```
 ![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
-
-<img src="[https://your-image-url.type](https://github.com/jninanya/SMC/blob/main/Picture1.png)" width="800" height="800">
