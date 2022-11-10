@@ -1,4 +1,4 @@
-FitCurveSM<-function(x, y, xfun = c("Beta", "Gompertz"), xtime = c("tt", "dap"), init.par = c(300,900,1.), use.par.default = "yes", graph=FALSE){
+FitCurveSM<-function(x, y, xfun = c("Beta", "Gompertz"), xtime = c("tt", "dap"), init.par = c(300,900,1.), use.par.default = TRUE, graph=FALSE){
 
 xfun=xfun
 xtime=xtime
@@ -9,7 +9,7 @@ if((xfun == "Beta" | xfun == "Gompertz") == FALSE){stop(paste0("Warning: Use Bet
 if((xtime == "tt" | xtime == "dap") == FALSE){stop(paste0("Warning: error in ", xtime, ". Use tt (thermal time) or dap (days after planting)"))}
 
 #--- Default initial values for Beta or Gompertz functions
-if(use.par.default == "yes"){
+if(use.par.default == TRUE){
   if (xfun == "Beta"){
     p1 = ifelse(xtime == "tt",  300., 40.)   # tm
     p2 = ifelse(xtime == "tt",  900., 90.)   # te
