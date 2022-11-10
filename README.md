@@ -1,7 +1,7 @@
 SMC
 =====
 
-R function to calibrate the potato growth model [SOLANUM](https://doi.org/10.21223/P3/E71OS6). Temporal data of potato biomass and canopy cover are required.
+R function to calibrate the [SOLANUM](https://doi.org/10.21223/P3/E71OS6) potato growth model. Temporal data of potato biomass and canopy cover are required.
 
 Usage
 -----
