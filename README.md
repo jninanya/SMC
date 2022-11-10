@@ -6,17 +6,17 @@ R function to calibrate the potato growth model [SOLANUM](https://doi.org/10.212
 Usage
 -----
 ```{r eval=F}
-FitCurveSM(x, y, xfun = "Beta", xtime = "tt", init.par = c(300, 900, 1.), use.par.default = "yes", graph = FALSE)
+FitCurveSM(x, y, xfun = "Beta", xtime = "tt", init.par = c(300, 900, 1.), use.par.default = TRUE, graph = FALSE)
 
 ```
 Arguments
 -----
-- **x:** Row name of the data frame __*data*__.
-- **y:** Column name of the yield data of drought stress condition. 
+- **x:** A vector of the timing (in __*dap -*__ days after planting or __*tt -*__ thermal time) when biomass or canopy cover data were collected.
+- **y:** A vector of temporal data of biomass (harvest index) or canopy cover (in %). 
 - **xfun:** Column name of the yield data of potential condition.
 - **xtime:** A data frame.
 - **init.par:** A drought stress index (SSI, TOL, MP, GMP, and STI) calculated in the function __*"Thiry"*__.
-- **use.par.default:** A logical value. If __inv=TRUE__, the drought stress index (__*x*__) is inverted. Default __inv=FALSE__.
+- **use.par.default:** A logical value. If __use.par.default=TRUE__, default values in __*init.par*__ will be used for the Beta or Gompertz function; otherwise, another initial value can be specified in __*init.par*__. Default __use.par.default=TRUE__.
 - **graph:** A logi
 
 Values
