@@ -36,3 +36,6 @@ n=20
 data=data.frame("id"=1:n,"ys"=runif(n)*5,"yp"=runif(n)*10)
 ts=Thiry("id","ys","yp",data)
 ```
+![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
+
+<img src="[https://your-image-url.type](https://github.com/jninanya/SMC/blob/main/Picture1.png)" width="800" height="800">
