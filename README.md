@@ -1,22 +1,23 @@
 SMC
 =====
 
-R function to calibrate the potato growth model [SOLANUM](https://doi.org/10.21223/P3/E71OS6).
+R function to calibrate the potato growth model [SOLANUM](https://doi.org/10.21223/P3/E71OS6). Temporal data of potato biomass and canopy cover are required.
 
 Usage
 -----
 ```{r eval=F}
-Thiry(id,ys,yp,data)
-ThiryScore(x,inv=FALSE)
+FitCurveSM(x, y, xfun = "Beta", xtime = "tt", init.par = c(300, 900, 1.), use.par.default = "yes", graph = FALSE)
+
 ```
 Arguments
 -----
-- **id:** Row name of the data frame __*data*__.
-- **ys:** Column name of the yield data of drought stress condition. 
-- **yp:** Column name of the yield data of potential condition.
-- **data:** A data frame.
-- **x:** A drought stress index (SSI, TOL, MP, GMP, and STI) calculated in the function __*"Thiry"*__.
-- **inv:** A logical value. If __inv=TRUE__, the drought stress index (__*x*__) is inverted. Default __inv=FALSE__.
+- **x:** Row name of the data frame __*data*__.
+- **y:** Column name of the yield data of drought stress condition. 
+- **xfun:** Column name of the yield data of potential condition.
+- **xtime:** A data frame.
+- **init.par:** A drought stress index (SSI, TOL, MP, GMP, and STI) calculated in the function __*"Thiry"*__.
+- **use.par.default:** A logical value. If __inv=TRUE__, the drought stress index (__*x*__) is inverted. Default __inv=FALSE__.
+- **graph:** A logi
 
 Values
 -----
