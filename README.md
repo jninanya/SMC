@@ -21,13 +21,11 @@ Arguments
 
 Values
 -----
-- **$indexes:** A data frame of the drought stress indexes SSI, TOL, MP, GMP, and STI.
-- **$scores:** A data frame of the Thiry's scores.
-- **$corr1.:**  A matrix of Pearson correlation among the drought stress indexes and the Thiry's scores.
-- **$range:** A list object with the range of the Thiry's scores SSI, TOL, MP, GMP, and STI. 
-- **$comb1.:** A data frame of combinations of the Thiry's scores.  
-- **$corr2.:** A matrix of Pearson correlation among Thiry's combinations and the yield data (**ys** and **yp**).
-- **$comb2.:** A data frame of the best Thiry's combination.
+- **$parameters:** A vector of the fitted parameters of the Beta or Gompertz function.
+- **$fitted.data:** A data frame of the observed and estimated data.
+- **$simulated.data:**  A data frame of simulated data for biomass or canopy cover.
+- **$warning.message:** A character indicating any warning message in the model fitting.
+- **$out.model:** A summary.nls of the model.
 
 Example
 -----
