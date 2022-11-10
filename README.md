@@ -39,4 +39,14 @@ out=FitCurveSM(x=cc[,1], y = cc[,5], xfun = "Beta", xtime = "dap")
 # Using another set of initial values (in case that default init.par value does not work)
 out=FitCurveSM(x=cc[,1], y = cc[,6], xfun = "Beta", xtime = "dap", use.par.default = FALSE, init.par = c(35,65,0.9), graph = TRUE)
 ```
-![plot](https://github.com/jninanya/SMC/blob/main/Picture1.png)
+
+![plot](https://github.com/jninanya/SMC/blob/main/fig_fitted_cc.png)
+
+```{r eval=F}
+# for biomass (harvest index) data
+out=FitCurveSM(x=hi[,1], y = hi[,3], xfun = "Gompertz", xtime = "dap", graph = TRUE)
+```
+![plot](https://github.com/jninanya/SMC/blob/main/fig_fitted_hi.png)
+
+
+
